@@ -1,0 +1,150 @@
+.task-item {
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.task-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.task-item.completed {
+  background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
+  opacity: 0.85;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+}
+
+.task-item.active {
+  border-left: 4px solid #667eea;
+}
+
+.task-content {
+  padding: 5px 0;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.task-title-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.task-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+  word-break: break-word;
+}
+
+.task-title.completed-text {
+  color: #718096;
+  text-decoration: line-through;
+}
+
+.task-status {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.action-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+.toggle-btn:hover {
+  box-shadow: 0 3px 10px rgba(40, 167, 69, 0.3);
+}
+
+.edit-btn:hover {
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3);
+}
+
+.delete-btn:hover {
+  box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+}
+
+.task-description {
+  color: #4a5568;
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.task-description.completed-text {
+  color: #718096;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.task-date,
+.task-completed-date {
+  font-size: 0.8rem;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.task-completed-date {
+  color: #48bb78;
+}
+
+@media (max-width: 768px) {
+  .task-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .task-actions {
+    justify-content: flex-start;
+  }
+  
+  .task-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
